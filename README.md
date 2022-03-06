@@ -7,13 +7,13 @@ Windows 64bit
 Autori
 ------
 
-Nazev tymu
-- xlogin01 jmeno prijmeni 
-- xlogin02 jmeno prijmeni 
-- xlogin03 jmeno prijmeni 
-- xlogin04 jmeno prijmeni 
+Tym 1
+- xazaro00 Vladimir Azarov 
+- xbalaz18 Balážová Lucia
+- xospal01 Ospalý Nikolas
+- xvasik05 Vasík János László 
 
 Licence
 -------
 
-Tento program je poskytovan...
+Tento program je poskytovan pod licenci GNU General Public License v3.0. 
