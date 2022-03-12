@@ -5,12 +5,12 @@ import calc
 
 class TestCase(unittest.TestCase):
     def test_add(self):
-        self.assertEquals(calc.add(2, 3), 5)
-        self.assertEquals(calc.add(1_000_000_000, 1), 1_000_000_001)
-        self.assertEquals(calc.add(1_000_000_000_0, 1), 1e10)
-        self.assertEquals(calc.add(1_000_000_000_0, 0), 1e10)
-        self.assertEquals(calc.add(1_000_000_000_0, 111_111_111_2), 1.1111e10)
-        self.assertEqual(calc.add(1.000_000_000_000_000_01 + 1), 1.000_000_000_0)
+        self.assertEqual(calc.add(2, 3), 5)
+        self.assertEqual(calc.add(1_000_000_000, 1), 1_000_000_001)
+        self.assertEqual(calc.add(1_000_000_000_0, 1), 1e10)
+        self.assertEqual(calc.add(1_000_000_000_0, 0), 1e10)
+        self.assertEqual(calc.add(1_000_000_000_0, 111_111_111_2), 1.1111e10)
+        self.assertEqual(calc.add(1.000_000_000_000_000_01 + 1), 1.000_000_000_0)   
         self.assertEqual(calc.add(1.000_000_000_000_000_01 + 1), 1.000_000_000_0)
 
     def test_sub(self):
@@ -32,7 +32,7 @@ class TestCase(unittest.TestCase):
         self.assertEqual(calc.div(0.0000000001, 0.0000000001), 0)
 
     def test_div(self):
-        self.assertRaises(ZeroDivisionError, calc.div(231, 0))
+        self.assertRaises(Exception, calc.div(231, 0))
         self.assertEqual(calc.div(0, 3421), 0)
         self.assertEqual(calc.div(0.0000000001, 0.0000000001), 0)
         self.assertEqual(calc.div(0.00001, 0.00001), 0.0000000001)
@@ -113,8 +113,8 @@ class TestCase(unittest.TestCase):
         self.assertEqual(calc.sqrt(8, 0.4), 181.01933598) 
 
     def test_mod(self):
-        self.assertRaises(ZeroDivisionError, calc.mod(1, 0))
-        self.assertRaises(ZeroDivisionError, calc.mod(0, 0))
+        self.assertRaises(Exception, calc.mod(1, 0))
+        self.assertRaises(Exception, calc.mod(0, 0))
 
         self.assertEqual(calc.mod(-5, 2), 1) 
         self.assertEqual(calc.mod(-5, 2), 1) 
