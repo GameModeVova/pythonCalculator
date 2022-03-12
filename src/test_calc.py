@@ -122,6 +122,7 @@ class TestCase(unittest.TestCase):
         self.assertEqual(calc.mod(-5.23, 2), 0.76) 
         self.assertEqual(calc.mod(12353251, 52311235), 12353251) 
         self.assertEqual(calc.mod(1000000000000, 9999999999999), 1e12)
+        
 
 if __name__ == "__main__":
     unittest.main()
