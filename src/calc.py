@@ -1,28 +1,28 @@
 #BELOW ARE INDIVIDUAL MATH FUNCTIONS
 import math
 
-def addition(first_value, second_value):
+def add(first_value, second_value):
     return(float(first_value)+float(second_value))
 
-def subtraction(first_value, second_value):
+def sub(first_value, second_value):
     return(float(first_value)-float(second_value))
 
-def multiplication(first_value, second_value):
+def mul(first_value, second_value):
     return(float(first_value)*float(second_value))
 
-def division(first_value, second_value):
+def div(first_value, second_value):
     return(float(first_value)/float(second_value))
 
-def exponent(first_value, second_value): 
+def exp(first_value, second_value): 
     return(math.pow(float(first_value), float(second_value)))
 
 def root(first_value, second_value):
     return(math.pow(float(second_value), 1/(float(first_value))))
 
-def factorial(first_value):
+def fact(first_value):
     return(math.factorial(int(first_value)))
 
-def remainder(first_value, second_value):
+def mod(first_value, second_value):
     return(float(first_value)%float(second_value))
 
 
