@@ -15,7 +15,7 @@ class TestCase(unittest.TestCase):
     def test_mul(self):   
         self.assertEqual(math_lib.mul(0, 0), 0)
         self.assertEqual(math_lib.mul(2315523153, 0), 0)
-        self.assertEqual(math_lib.mul(123489235, 0.53215231), 65_715_081.665)
+        self.assertEqual(math_lib.mul(123489235, 0.53215231), 65715081.66538285)
         self.assertEqual(math_lib.mul(123489235, 0.523475), 64643527.292)
         self.assertEqual(math_lib.mul(123489235, 0.9), 111140311.5)
         self.assertEqual(math_lib.div(0.0000000001, 0.0000000001), 1)
