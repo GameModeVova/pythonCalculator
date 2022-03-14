@@ -47,22 +47,23 @@ class TestCase(unittest.TestCase):
 
     def test_root(self):
         # n = -10
-        self.assertEqual(math_lib.root(0, -10), float('inf'))
+        self.assertRaises(Exception, math_lib.root(0, -10))
         self.assertEqual(math_lib.root(100, -10), 0.630_957_344_5)
         self.assertRaises(Exception, math_lib.root(-100, -10))
 
         # n = -7
-        self.assertEqual(math_lib.root(0, -7), float('inf'))
+        self.assertRaises(Exception, math_lib.root(0, -7))
+        self.assertEqual(math_lib.root(100, -10), 0.630_957_344_5)
         self.assertEqual(math_lib.root(100, -7),  0.517_947_467_9)
         self.assertEqual(math_lib.root(-100, -7), -0.517_947_467_9)
 
         # n = -9.9
-        self.assertEqual(math_lib.root(0, -9.9), float('inf'))
+        self.assertRaises(Exception, math_lib.root(0, -9.9))
         self.assertEqual(math_lib.root(3, -9.9), 0.894_964_757_8) 
         self.assertEqual(math_lib.root(-3, -9.9), -0.517_947_467_9)
 
         # n = -9.8
-        self.assertEqual(math_lib.root(0, -9.8), float('inf'))
+        self.assertRaises(Exception, math_lib.root(0, -9.8))
         self.assertEqual(math_lib.root(3, -9.8), 0.893_951_912_2) 
         self.assertEqual(math_lib.root(-3, -9.8), -0.893_951_912_2)
 
