@@ -23,12 +23,12 @@ def exp(first_value, second_value):
     return(round(math.pow(float(first_value), float(second_value)),10))
 
 def root(first_value, second_value):
-    return(round(math.pow(float(second_value), 1/(float(first_value))),10))
+    return(round(float(first_value)**(1/float(second_value),10))) #check for imaginary number
 
 def fact(first_value):
     non_integer_error = "YOU HAVE SINNED BY ATTEMPTING TO CALCULATE FACTORIAL OF A NON-INTEGER" #This error message should also be changed
 
-    if first_value.is_integer():
+    if float(first_value).is_integer():
         return(round(math.factorial(int(first_value)),10))
     else:
         return(non_integer_error)

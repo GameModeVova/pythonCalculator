@@ -12,7 +12,7 @@ class TestCase(unittest.TestCase):
         self.assertEqual(math_lib.sub(1.0, 0.999_999_999_9), 0.000_000_000_1)
         self.assertEqual(math_lib.sub(0.999_999_999_9, 1.0), -0.000_000_000_1)
 
-    def test_mul(self):
+    def test_mul(self):   
         self.assertEqual(math_lib.mul(0, 0), 0)
         self.assertEqual(math_lib.mul(2315523153, 0), 0)
         self.assertEqual(math_lib.mul(123489235, 0.53215231), 65_715_081.665)
@@ -37,13 +37,13 @@ class TestCase(unittest.TestCase):
         self.assertRaises(ValueError, math_lib.fact(2.2))
         self.assertRaises(TypeError, math_lib.fact(-2.2))
 
-    def test_exp(self):
+    def test_exp(self): 
         self.assertEqual(math_lib.exp(0, 324234), 0)
         self.assertEqual(math_lib.exp(-1, 324234), 1)
         self.assertEqual(math_lib.exp(-1, 324235), -1)
         self.assertEqual(math_lib.exp(2.3, 3), 12.167)
         self.assertEqual(math_lib.exp(2.3, 6), 148.035889)
-        self.assertEqual(math_lib.exp(2.3, 9), 1801.1526615)
+        self.assertEqual(math_lib.exp(2.3, 9), 1801.152661463)
 
     def test_root(self):
         # n = -10
@@ -112,7 +112,7 @@ class TestCase(unittest.TestCase):
         self.assertEqual(math_lib.mod(-5, 2), 1) 
         self.assertEqual(math_lib.mod(-5, 2), 1) 
         self.assertEqual(math_lib.mod(-5.6, 2), 0.4) 
-        self.assertEqual(math_lib.mod(-5.23, 2), 0.76) 
+        self.assertEqual(math_lib.mod(-5.23, 2), 0.77) 
         self.assertEqual(math_lib.mod(12353251, 52311235), 12353251) 
 
 if __name__ == "__main__":
