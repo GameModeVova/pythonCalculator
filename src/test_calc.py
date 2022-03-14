@@ -33,9 +33,9 @@ class TestCase(unittest.TestCase):
         self.assertEqual(math_lib.fact(0), 1)
         self.assertEqual(math_lib.fact(1), 1)
         self.assertEqual(math_lib.fact(13), 6_227_020_800)
-        self.assertRaises(TypeError, math_lib.fact(2.2))
-        self.assertRaises(ValueError, math_lib.fact(2.2))
-        self.assertRaises(TypeError, math_lib.fact(-2.2))
+        self.assertRaises(Exception, math_lib.fact(2.2))
+        self.assertRaises(Exception, math_lib.fact(2.2))
+        self.assertRaises(Exception, math_lib.fact(-2.2))
 
     def test_exp(self): 
         self.assertEqual(math_lib.exp(0, 324234), 0)
@@ -53,9 +53,9 @@ class TestCase(unittest.TestCase):
 
         # n = -7
         self.assertRaises(Exception, math_lib.root(0, -7))
+        self.assertRaises(Exception, math_lib.root(-100, -7))
         self.assertEqual(math_lib.root(100, -10), 0.630_957_344_5)
         self.assertEqual(math_lib.root(100, -7),  0.517_947_467_9)
-        self.assertEqual(math_lib.root(-100, -7), -0.517_947_467_9)
 
         # n = -9.9
         self.assertRaises(Exception, math_lib.root(0, -9.9))
