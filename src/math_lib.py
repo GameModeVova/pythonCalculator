@@ -1,5 +1,5 @@
-#BELOW ARE INDIVIDUAL MATH FUNCTIONS
 import math
+import numpy as np
 
 def add(first_value, second_value):
     return(round(float(first_value)+float(second_value),10))
@@ -23,7 +23,13 @@ def exp(first_value, second_value):
     return(round(math.pow(float(first_value), float(second_value)),10))
 
 def root(first_value, second_value):
-    return(round(float(first_value)**(1/float(second_value),10))) #check for imaginary number
+    comples_root_error = "ERROR MESSAGE" #change this to a meaningful error message
+   
+    #CHECKING FOR IMAGINARY NUMBER ERROR
+    if np.iscomplex(round(float(first_value)**(1/float(second_value),10))):
+        return(comples_root_error)
+    else:
+        return(round(float(first_value)**(1/float(second_value),10)))
 
 def fact(first_value):
     non_integer_error = "YOU HAVE SINNED BY ATTEMPTING TO CALCULATE FACTORIAL OF A NON-INTEGER" #This error message should also be changed
