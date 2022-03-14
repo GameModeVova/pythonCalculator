@@ -60,12 +60,12 @@ class TestCase(unittest.TestCase):
         # n = -9.9
         self.assertRaises(Exception, math_lib.root(0, -9.9))
         self.assertEqual(math_lib.root(3, -9.9), 0.894_964_757_8) 
-        self.assertEqual(math_lib.root(-3, -9.9), -0.517_947_467_9)
+        self.assertRaises(Exception, math_lib.root(-3, -9.9))
 
         # n = -9.8
         self.assertRaises(Exception, math_lib.root(0, -9.8))
+        self.assertRaises(Exception, math_lib.root(-3, -9.8))
         self.assertEqual(math_lib.root(3, -9.8), 0.893_951_912_2) 
-        self.assertEqual(math_lib.root(-3, -9.8), -0.893_951_912_2)
 
         # n = -1
         self.assertEqual(math_lib.root(-1, -1), -1)
@@ -104,7 +104,6 @@ class TestCase(unittest.TestCase):
         self.assertEqual(math_lib.root(1, 0.4), 1) 
         self.assertEqual(math_lib.root(4, 0.4), 32) 
         self.assertEqual(math_lib.root(4, 0.4), 32) 
-        self.assertEqual(math_lib.root(8, 0.4), 181.01933598) 
 
     def test_mod(self):
         self.assertRaises(Exception, math_lib.mod(1, 0))
