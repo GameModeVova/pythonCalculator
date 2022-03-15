@@ -19,5 +19,3 @@ Kanály pro komunikaci:
 Systém pro zprávu verzí:
 	
 	GitHub: https://github.com/GameModeVova/pythonCalculator
-
-xbalaz18_xazaro00_xvasik05_xospal01
