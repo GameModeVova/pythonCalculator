@@ -1,5 +1,6 @@
 import math
-import math_lib 
+import math_lib
+import tkinter as tk
 
 #IMPORTANT check for division by zero
 
@@ -86,3 +87,52 @@ def function_executioner(user_input):
 #ADDING ALL FUNCTIONS FOR A RESULT, ALSO SAVES RESULT INTO CASHE
 def solver(user_input):
     return(function_executioner(input_formating(error_checker(user_input))))
+
+
+
+#Basic tkinter UI Layout
+#---------------------------------------------------------------------------
+
+
+window = tk.Tk()
+window.title("Calculator")
+window.geometry("720x800")
+window.columnconfigure((0,4,7),weight=1)
+window.columnconfigure((1,2,3,5,6),weight=3)
+
+window.rowconfigure((0,2,7,9),weight=1)
+window.rowconfigure((1,8), weight = 2)
+window.rowconfigure((3,4,5,6), weight=3)
+
+#DISPLAY
+display = tk.Entry(window).grid(row=1,column=0,columnspan=7,ipady=20,ipadx=720)
+
+#NUMPAD
+key_1 = tk.Button(window,text="1").grid(row=3,column=1,ipady =40,ipadx=40)
+key_2 = tk.Button(window,text="2").grid(row=3,column=2,ipady =40,ipadx=40)
+key_3 = tk.Button(window,text="3").grid(row=3,column=3,ipady =40,ipadx=40)
+key_4 = tk.Button(window,text="4").grid(row=4,column=1,ipady =40,ipadx=40)
+key_5 = tk.Button(window,text="5").grid(row=4,column=2,ipady =40,ipadx=40)
+key_6 = tk.Button(window,text="6").grid(row=4,column=3,ipady =40,ipadx=40)
+key_7 = tk.Button(window,text="7").grid(row=5,column=1,ipady =40,ipadx=40)
+key_8 = tk.Button(window,text="8").grid(row=5,column=2,ipady =40,ipadx=40)
+key_9 = tk.Button(window,text="9").grid(row=5,column=3,ipady =40,ipadx=40)
+key_0 = tk.Button(window,text="0").grid(row=6,column=2,ipady =40,ipadx=40)
+
+key_decimal = tk.Button(window,text=",").grid(row=6,column=1,ipady =40,ipadx=40)
+key_equals = tk.Button(window,text="=").grid(row=6,column=3,ipady =40,ipadx=40)
+
+#FUNCTION PAD
+key_add = tk.Button(window,text="+").grid(row=3,column=5,ipady =40,ipadx=40)
+key_sub = tk.Button(window,text="-").grid(row=3,column=6,ipady =40,ipadx=40)
+key_mul = tk.Button(window,text="x").grid(row=4,column=5,ipady =40,ipadx=40)
+key_div = tk.Button(window,text="/").grid(row=4,column=6,ipady =40,ipadx=40)
+key_pow = tk.Button(window,text="^").grid(row=5,column=5,ipady =40,ipadx=40)
+key_roo = tk.Button(window,text="^1/x").grid(row=5,column=6,ipady =40,ipadx=40)
+key_mod = tk.Button(window,text="%").grid(row=6,column=5,ipady =40,ipadx=40)
+key_fac = tk.Button(window,text="!").grid(row=6,column=6,ipady =40,ipadx=40)
+
+#CALCPAD
+key_delete = tk.Button(window,text="DELETE").grid(row=8,column=1,ipady =20,ipadx=40)
+key_clear = tk.Button(window,text="CLEAR").grid(row=8,column=2,ipady =20,ipadx=40)
+key_1_cache = tk.Button(window,text="CACHE").grid(row=8,column=3,ipady =20,ipadx=40)
