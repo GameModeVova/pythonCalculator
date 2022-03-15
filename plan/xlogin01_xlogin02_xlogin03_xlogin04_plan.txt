@@ -1,8 +1,21 @@
-Tento soubor bude obsahovat:
+Stanovené termíny:
 
--- stanovené termíny,
--- přidělení úkolů na projektu jednotlivým řešitelům,
--- zvolené komunikační kanály pro komunikaci v týmu a stanovená pravidla pro komunikaci (jsou-li nějaká),
--- zvolený systém pro správu verzí a hosting + informaci, jak do repozitáře mohou nahlédnout vyučující/cvičící (viz níže).
+	Testy:  	     xazaro00  					    	11.3.2022
+	Knihovna:        xospal01  					    	13.3.2022
+	GUI:  	         xbalaz18, xazaro00, xvasik05, xospal01  	20.3.2022
+	Instalátor:      xospal01 					    	27.3.2022
+	UZ dokumentace:  xospal01 					    	27.3.2022
+	MakeFile:  	     xazaro00  				          	3.4.2022
+	Debugging:       xvasik05 			    			3.4.2022
+	Profiling:       xbalaz18, xazaro00, xvasik05 		    	3.4.2022
+	Dokumentace:     xbalaz18, xazaro00, xvasik05, xospal01  	10.4.2022   
+	Mockup:  	     xbalaz18  					    	10.4.2022			
+	
+Kanály pro komunikaci:
+	
+	Discord: pro nepřesnou domluvu a zdílení nápadů a řešení problémů (bez omezení nebo pravidel)
+	Notion: pro sepsání plánu (změna pouze v nouzi, když bude třeba na discordu se domluví, a potom se změna přídá do notion)
 
-Alternativně lze odevzdat archiv xlogin01_xlogin02_xlogin03_xlogin04_plan.zip, který bude obsahovat libovolný počet souborů xlogin01_xlogin02_xlogin03_xlogin04_plan* ("*" zastupuje libovolný počet libovolných znaků, tedy např. ".mpp" či "01.jpg"), přičemž plán zde může být vytvořený v MS Projectu či jiném programu (není-li daný program ve škole dostupný, je nutno odevzdat i exportovanou verzi v PDF či jpg).
+Systém pro zprávu verzí:
+	
+	GitHub: https://github.com/GameModeVova/pythonCalculator
