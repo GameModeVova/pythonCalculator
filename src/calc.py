@@ -109,7 +109,18 @@ head_menu = tk.Menu(window)
 
 help_menu = tk.Menu(head_menu, tearoff=0)
 help_menu.add_command(label="+")
+help_menu.add_command(label="-")
+help_menu.add_command(label="*")
+help_menu.add_command(label="/")
+help_menu.add_command(label="^")
+help_menu.add_command(label="√")
+help_menu.add_command(label="!")
+help_menu.add_command(label="%")
 head_menu.add_cascade(label="Help", menu=help_menu)
+
+theme_menu = tk.Menu(head_menu, tearoff=0)
+head_menu.add_cascade(label="Theme", menu=theme_menu)
+
 window.config(menu=head_menu)
 
 #DISPLAY
@@ -212,10 +223,10 @@ key_equals = tk.Button(window,text="=").grid(row=6,column=3,ipady =40,ipadx=40)
 #FUNCTION PAD
 key_add = tk.Button(window,text="+").grid(row=3,column=5,ipady =40,ipadx=40)
 key_sub = tk.Button(window,text="-").grid(row=3,column=6,ipady =40,ipadx=40)
-key_mul = tk.Button(window,text="x").grid(row=4,column=5,ipady =40,ipadx=40)
+key_mul = tk.Button(window,text="*").grid(row=4,column=5,ipady =40,ipadx=40)
 key_div = tk.Button(window,text="/").grid(row=4,column=6,ipady =40,ipadx=40)
 key_pow = tk.Button(window,text="^").grid(row=5,column=5,ipady =40,ipadx=40)
-key_roo = tk.Button(window,text="^1/x").grid(row=5,column=6,ipady =40,ipadx=40)
+key_roo = tk.Button(window,text="√").grid(row=5,column=6,ipady =40,ipadx=40)
 key_mod = tk.Button(window,text="%").grid(row=6,column=5,ipady =40,ipadx=40)
 key_fac = tk.Button(window,text="!").grid(row=6,column=6,ipady =40,ipadx=40)
 
