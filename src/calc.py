@@ -113,25 +113,98 @@ head_menu.add_cascade(label="Help", menu=help_menu)
 window.config(menu=head_menu)
 
 #DISPLAY
+# functions
+# ---------------------------------------------------------------------------------------------------------------------------
 current_val = ""
 
+def click_clear():
+    global current_val
+    current_val = ""
+    d_num.set(current_val)
 
+def click_delete():
+    global current_val
+    current_val = current_val[0:-1]
+    d_num.set(current_val)
+
+# key entry
+def click_1():
+    global current_val
+    current_val = current_val + "1"
+    d_num.set(current_val)
+
+
+def click_2():
+    global current_val
+    current_val = current_val + "2"
+    d_num.set(current_val)
+
+
+def click_3():
+    global current_val
+    current_val = current_val + "3"
+    d_num.set(current_val)
+
+
+def click_4():
+    global current_val
+    current_val = current_val + "4"
+    d_num.set(current_val)
+
+
+def click_5():
+    global current_val
+    current_val = current_val + "5"
+    d_num.set(current_val)
+
+
+def click_6():
+    global current_val
+    current_val = current_val + "6"
+    d_num.set(current_val)
+
+
+def click_7():
+    global current_val
+    current_val = current_val + "7"
+    d_num.set(current_val)
+
+
+def click_8():
+    global current_val
+    current_val = current_val + "8"
+    d_num.set(current_val)
+
+
+def click_9():
+    global current_val
+    current_val = current_val + "9"
+    d_num.set(current_val)
+
+
+def click_0():
+    global current_val
+    current_val = current_val + "0"
+    d_num.set(current_val)
+
+# label
+# ---------------------------------------------------------------------------------------------------------------------------
 d_num = tk.StringVar(window)
 d_num.set(current_val)
 display = tk.Label(window,textvariable=d_num)
 display.grid(row=1,column=0,columnspan=7,ipady=20,ipadx=720)
 
 #NUMPAD
-key_1 = tk.Button(window,text="1").grid(row=3,column=1,ipady =40,ipadx=40)
-key_2 = tk.Button(window,text="2").grid(row=3,column=2,ipady =40,ipadx=40)
-key_3 = tk.Button(window,text="3").grid(row=3,column=3,ipady =40,ipadx=40)
-key_4 = tk.Button(window,text="4").grid(row=4,column=1,ipady =40,ipadx=40)
-key_5 = tk.Button(window,text="5").grid(row=4,column=2,ipady =40,ipadx=40)
-key_6 = tk.Button(window,text="6").grid(row=4,column=3,ipady =40,ipadx=40)
-key_7 = tk.Button(window,text="7").grid(row=5,column=1,ipady =40,ipadx=40)
-key_8 = tk.Button(window,text="8").grid(row=5,column=2,ipady =40,ipadx=40)
-key_9 = tk.Button(window,text="9").grid(row=5,column=3,ipady =40,ipadx=40)
-key_0 = tk.Button(window,text="0").grid(row=6,column=2,ipady =40,ipadx=40)
+key_1 = tk.Button(window,text="1",command=click_1).grid(row=3,column=1,ipady =40,ipadx=40)
+key_2 = tk.Button(window,text="2",command=click_2).grid(row=3,column=2,ipady =40,ipadx=40)
+key_3 = tk.Button(window,text="3",command=click_3).grid(row=3,column=3,ipady =40,ipadx=40)
+key_4 = tk.Button(window,text="4",command=click_4).grid(row=4,column=1,ipady =40,ipadx=40)
+key_5 = tk.Button(window,text="5",command=click_5).grid(row=4,column=2,ipady =40,ipadx=40)
+key_6 = tk.Button(window,text="6",command=click_6).grid(row=4,column=3,ipady =40,ipadx=40)
+key_7 = tk.Button(window,text="7",command=click_7).grid(row=5,column=1,ipady =40,ipadx=40)
+key_8 = tk.Button(window,text="8",command=click_8).grid(row=5,column=2,ipady =40,ipadx=40)
+key_9 = tk.Button(window,text="9",command=click_9).grid(row=5,column=3,ipady =40,ipadx=40)
+key_0 = tk.Button(window,text="0",command=click_0).grid(row=6,column=2,ipady =40,ipadx=40)
 
 key_decimal = tk.Button(window,text=",").grid(row=6,column=1,ipady =40,ipadx=40)
 key_equals = tk.Button(window,text="=").grid(row=6,column=3,ipady =40,ipadx=40)
@@ -147,6 +220,6 @@ key_mod = tk.Button(window,text="%").grid(row=6,column=5,ipady =40,ipadx=40)
 key_fac = tk.Button(window,text="!").grid(row=6,column=6,ipady =40,ipadx=40)
 
 #CALCPAD
-key_delete = tk.Button(window,text="DELETE").grid(row=8,column=1,ipady =20,ipadx=40)
-key_clear = tk.Button(window,text="CLEAR").grid(row=8,column=2,ipady =20,ipadx=40)
+key_delete = tk.Button(window,text="DELETE",command =click_delete).grid(row=8,column=1,ipady =20,ipadx=40)
+key_clear = tk.Button(window,text="CLEAR",command =click_clear).grid(row=8,column=2,ipady =20,ipadx=40)
 key_1_cache = tk.Button(window,text="CACHE").grid(row=8,column=3,ipady =20,ipadx=40)
