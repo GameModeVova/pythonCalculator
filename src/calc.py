@@ -123,6 +123,10 @@ head_menu.add_cascade(label="Theme", menu=theme_menu)
 
 window.config(menu=head_menu)
 
+#colour schemes
+default_set = ["#a5c663", "#354f00", "#7b9f35", "#d4ee9f"]
+window.configure(background=default_set[2])
+
 #DISPLAY
 # functions
 # ---------------------------------------------------------------------------------------------------------------------------
@@ -210,20 +214,32 @@ d_num = tk.StringVar(window)
 d_num.set(current_val)
 display = tk.Label(window,textvariable=d_num,font= 30)
 display.grid(row=1,column=0,columnspan=7,ipady=20,ipadx=720)
+display.configure(background=default_set[3], fg=default_set[1])
 
 #NUMPAD
-key_1 = tk.Button(window,text="1",command=click_1).grid(row=3,column=1,ipady =40,ipadx=40)
-key_2 = tk.Button(window,text="2",command=click_2).grid(row=3,column=2,ipady =40,ipadx=40)
-key_3 = tk.Button(window,text="3",command=click_3).grid(row=3,column=3,ipady =40,ipadx=40)
-key_4 = tk.Button(window,text="4",command=click_4).grid(row=4,column=1,ipady =40,ipadx=40)
-key_5 = tk.Button(window,text="5",command=click_5).grid(row=4,column=2,ipady =40,ipadx=40)
-key_6 = tk.Button(window,text="6",command=click_6).grid(row=4,column=3,ipady =40,ipadx=40)
-key_7 = tk.Button(window,text="7",command=click_7).grid(row=5,column=1,ipady =40,ipadx=40)
-key_8 = tk.Button(window,text="8",command=click_8).grid(row=5,column=2,ipady =40,ipadx=40)
-key_9 = tk.Button(window,text="9",command=click_9).grid(row=5,column=3,ipady =40,ipadx=40)
-key_0 = tk.Button(window,text="0",command=click_0).grid(row=6,column=2,ipady =40,ipadx=40)
+key_1 = tk.Button(window,text="1",command=click_1,bg=default_set[0],fg=default_set[1])\
+    .grid(row=3,column=1,ipady =40,ipadx=40)
+key_2 = tk.Button(window,text="2",command=click_2,bg=default_set[0],fg=default_set[1])\
+    .grid(row=3,column=2,ipady =40,ipadx=40)
+key_3 = tk.Button(window,text="3",command=click_3,bg=default_set[0],fg=default_set[1])\
+    .grid(row=3,column=3,ipady =40,ipadx=40)
+key_4 = tk.Button(window,text="4",command=click_4,bg=default_set[0],fg=default_set[1])\
+    .grid(row=4,column=1,ipady =40,ipadx=40)
+key_5 = tk.Button(window,text="5",command=click_5,bg=default_set[0],fg=default_set[1])\
+    .grid(row=4,column=2,ipady =40,ipadx=40)
+key_6 = tk.Button(window,text="6",command=click_6,bg=default_set[0],fg=default_set[1])\
+    .grid(row=4,column=3,ipady =40,ipadx=40)
+key_7 = tk.Button(window,text="7",command=click_7,bg=default_set[0],fg=default_set[1])\
+    .grid(row=5,column=1,ipady =40,ipadx=40)
+key_8 = tk.Button(window,text="8",command=click_8,bg=default_set[0],fg=default_set[1])\
+    .grid(row=5,column=2,ipady =40,ipadx=40)
+key_9 = tk.Button(window,text="9",command=click_9,bg=default_set[0],fg=default_set[1])\
+    .grid(row=5,column=3,ipady =40,ipadx=40)
+key_0 = tk.Button(window,text="0",command=click_0,bg=default_set[0],fg=default_set[1])\
+    .grid(row=6,column=2,ipady =40,ipadx=40)
 
-key_decimal = tk.Button(window,text=",",command=click_decimal).grid(row=6,column=1,ipady =40,ipadx=40)
+key_decimal = tk.Button(window,text=",",command=click_decimal,bg=default_set[0],fg=default_set[1])\
+    .grid(row=6,column=1,ipady =40,ipadx=40)
 
 #FUNCTION PAD
 
@@ -267,19 +283,30 @@ def click_fac():
     current_val = current_val + " ! "
     d_num.set(current_val)
 #-------------------------------------------------------------------------------------------------------------------------
-key_add = tk.Button(window,text="+",command =click_add).grid(row=3,column=5,ipady =40,ipadx=40)
-key_sub = tk.Button(window,text="-",command =click_sub).grid(row=3,column=6,ipady =40,ipadx=40)
-key_mul = tk.Button(window,text="*",command =click_mul).grid(row=4,column=5,ipady =40,ipadx=40)
-key_div = tk.Button(window,text="/",command =click_div).grid(row=4,column=6,ipady =40,ipadx=40)
-key_pow = tk.Button(window,text="^",command =click_pow).grid(row=5,column=5,ipady =40,ipadx=40)
-key_roo = tk.Button(window,text="√",command =click_roo).grid(row=5,column=6,ipady =40,ipadx=40)
-key_mod = tk.Button(window,text="%",command =click_mod).grid(row=6,column=5,ipady =40,ipadx=40)
-key_fac = tk.Button(window,text="!",command =click_fac).grid(row=6,column=6,ipady =40,ipadx=40)
+key_add = tk.Button(window,text="+",command =click_add,bg=default_set[0],fg=default_set[1])\
+    .grid(row=3,column=5,ipady =40,ipadx=40)
+key_sub = tk.Button(window,text="-",command =click_sub,bg=default_set[0],fg=default_set[1])\
+    .grid(row=3,column=6,ipady =40,ipadx=40)
+key_mul = tk.Button(window,text="*",command =click_mul,bg=default_set[0],fg=default_set[1])\
+    .grid(row=4,column=5,ipady =40,ipadx=40)
+key_div = tk.Button(window,text="/",command =click_div,bg=default_set[0],fg=default_set[1])\
+    .grid(row=4,column=6,ipady =40,ipadx=40)
+key_pow = tk.Button(window,text="^",command =click_pow,bg=default_set[0],fg=default_set[1])\
+    .grid(row=5,column=5,ipady =40,ipadx=40)
+key_roo = tk.Button(window,text="√",command =click_roo,bg=default_set[0],fg=default_set[1])\
+    .grid(row=5,column=6,ipady =40,ipadx=40)
+key_mod = tk.Button(window,text="%",command =click_mod,bg=default_set[0],fg=default_set[1])\
+    .grid(row=6,column=5,ipady =40,ipadx=40)
+key_fac = tk.Button(window,text="!",command =click_fac,bg=default_set[0],fg=default_set[1])\
+    .grid(row=6,column=6,ipady =40,ipadx=40)
 
 #CALCPAD
-key_delete = tk.Button(window,text="DELETE",command =click_delete).grid(row=8,column=1,ipady =20,ipadx=40)
-key_clear = tk.Button(window,text="CLEAR",command =click_clear).grid(row=8,column=2,ipady =20,ipadx=40)
-key_1_cache = tk.Button(window,text="CACHE").grid(row=8,column=3,ipady =20,ipadx=40)
+key_delete = tk.Button(window,text="DELETE",command =click_delete,bg=default_set[0],fg=default_set[1])\
+    .grid(row=8,column=1,ipady =20,ipadx=40)
+key_clear = tk.Button(window,text="CLEAR",command =click_clear,bg=default_set[0],fg=default_set[1])\
+    .grid(row=8,column=2,ipady =20,ipadx=40)
+key_1_cache = tk.Button(window,text="CACHE",bg=default_set[0],fg=default_set[1])\
+    .grid(row=8,column=3,ipady =20,ipadx=40)
 
 #INPUT TRANSFORMATION
 op_list = current_val.split()
@@ -289,6 +316,7 @@ def equals():
     op_list = current_val.split()
     print(op_list)
 
-key_equals = tk.Button(window,text="=",command=equals).grid(row=6,column=3,ipady =40,ipadx=40)
+key_equals = tk.Button(window,text="=",command=equals,bg=default_set[0],fg=default_set[1])\
+    .grid(row=6,column=3,ipady =40,ipadx=40)
 
 window.mainloop()
