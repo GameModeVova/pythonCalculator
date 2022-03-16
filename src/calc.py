@@ -125,6 +125,8 @@ window.config(menu=head_menu)
 
 #colour schemes
 default_set = ["#a5c663", "#354f00", "#7b9f35", "#d4ee9f"]
+#0=button bg, 1=text, 2=window bg, 3=label bg
+
 window.configure(background=default_set[2])
 
 #DISPLAY
