@@ -221,14 +221,55 @@ key_decimal = tk.Button(window,text=",").grid(row=6,column=1,ipady =40,ipadx=40)
 key_equals = tk.Button(window,text="=").grid(row=6,column=3,ipady =40,ipadx=40)
 
 #FUNCTION PAD
-key_add = tk.Button(window,text="+").grid(row=3,column=5,ipady =40,ipadx=40)
-key_sub = tk.Button(window,text="-").grid(row=3,column=6,ipady =40,ipadx=40)
-key_mul = tk.Button(window,text="*").grid(row=4,column=5,ipady =40,ipadx=40)
-key_div = tk.Button(window,text="/").grid(row=4,column=6,ipady =40,ipadx=40)
-key_pow = tk.Button(window,text="^").grid(row=5,column=5,ipady =40,ipadx=40)
-key_roo = tk.Button(window,text="√").grid(row=5,column=6,ipady =40,ipadx=40)
-key_mod = tk.Button(window,text="%").grid(row=6,column=5,ipady =40,ipadx=40)
-key_fac = tk.Button(window,text="!").grid(row=6,column=6,ipady =40,ipadx=40)
+
+def click_add():
+    global current_val
+    current_val = current_val + " + "
+    d_num.set(current_val)
+
+def click_sub():
+    global current_val
+    current_val = current_val + " - "
+    d_num.set(current_val)
+
+def click_mul():
+    global current_val
+    current_val = current_val + " * "
+    d_num.set(current_val)
+
+def click_div():
+    global current_val
+    current_val = current_val + " / "
+    d_num.set(current_val)
+
+def click_pow():
+    global current_val
+    current_val = current_val + " ^ "
+    d_num.set(current_val)
+
+def click_roo():
+    global current_val
+    current_val = current_val + " √ "
+    d_num.set(current_val)
+
+def click_mod():
+    global current_val
+    current_val = current_val + " % "
+    d_num.set(current_val)
+
+def click_fac():
+    global current_val
+    current_val = current_val + " ! "
+    d_num.set(current_val)
+#-------------------------------------------------------------------------------------------------------------------------
+key_add = tk.Button(window,text="+",command =click_add).grid(row=3,column=5,ipady =40,ipadx=40)
+key_sub = tk.Button(window,text="-",command =click_sub).grid(row=3,column=6,ipady =40,ipadx=40)
+key_mul = tk.Button(window,text="*",command =click_mul).grid(row=4,column=5,ipady =40,ipadx=40)
+key_div = tk.Button(window,text="/",command =click_div).grid(row=4,column=6,ipady =40,ipadx=40)
+key_pow = tk.Button(window,text="^",command =click_pow).grid(row=5,column=5,ipady =40,ipadx=40)
+key_roo = tk.Button(window,text="√",command =click_roo).grid(row=5,column=6,ipady =40,ipadx=40)
+key_mod = tk.Button(window,text="%",command =click_mod).grid(row=6,column=5,ipady =40,ipadx=40)
+key_fac = tk.Button(window,text="!",command =click_fac).grid(row=6,column=6,ipady =40,ipadx=40)
 
 #CALCPAD
 key_delete = tk.Button(window,text="DELETE",command =click_delete).grid(row=8,column=1,ipady =20,ipadx=40)
