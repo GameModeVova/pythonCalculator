@@ -1,5 +1,5 @@
 import math
-import numpy as np
+#import numpy as np
 
 def add(first_value, second_value):
     return(round(float(first_value)+float(second_value),10))

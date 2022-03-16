@@ -234,3 +234,6 @@ key_fac = tk.Button(window,text="!").grid(row=6,column=6,ipady =40,ipadx=40)
 key_delete = tk.Button(window,text="DELETE",command =click_delete).grid(row=8,column=1,ipady =20,ipadx=40)
 key_clear = tk.Button(window,text="CLEAR",command =click_clear).grid(row=8,column=2,ipady =20,ipadx=40)
 key_1_cache = tk.Button(window,text="CACHE").grid(row=8,column=3,ipady =20,ipadx=40)
+
+
+window.mainloop()
