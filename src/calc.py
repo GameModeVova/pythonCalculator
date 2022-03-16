@@ -198,11 +198,17 @@ def click_0():
     current_val = current_val + "0"
     d_num.set(current_val)
 
+def click_decimal():
+    global current_val
+    current_val = current_val + "."
+    d_num.set(current_val)
+
+
 # label
 # ---------------------------------------------------------------------------------------------------------------------------
 d_num = tk.StringVar(window)
 d_num.set(current_val)
-display = tk.Label(window,textvariable=d_num)
+display = tk.Label(window,textvariable=d_num,font= 30)
 display.grid(row=1,column=0,columnspan=7,ipady=20,ipadx=720)
 
 #NUMPAD
@@ -217,8 +223,7 @@ key_8 = tk.Button(window,text="8",command=click_8).grid(row=5,column=2,ipady =40
 key_9 = tk.Button(window,text="9",command=click_9).grid(row=5,column=3,ipady =40,ipadx=40)
 key_0 = tk.Button(window,text="0",command=click_0).grid(row=6,column=2,ipady =40,ipadx=40)
 
-key_decimal = tk.Button(window,text=",").grid(row=6,column=1,ipady =40,ipadx=40)
-key_equals = tk.Button(window,text="=").grid(row=6,column=3,ipady =40,ipadx=40)
+key_decimal = tk.Button(window,text=",",command=click_decimal).grid(row=6,column=1,ipady =40,ipadx=40)
 
 #FUNCTION PAD
 
@@ -276,5 +281,14 @@ key_delete = tk.Button(window,text="DELETE",command =click_delete).grid(row=8,co
 key_clear = tk.Button(window,text="CLEAR",command =click_clear).grid(row=8,column=2,ipady =20,ipadx=40)
 key_1_cache = tk.Button(window,text="CACHE").grid(row=8,column=3,ipady =20,ipadx=40)
 
+#INPUT TRANSFORMATION
+op_list = current_val.split()
+
+def equals():
+    global op_list
+    op_list = current_val.split()
+    print(op_list)
+
+key_equals = tk.Button(window,text="=",command=equals).grid(row=6,column=3,ipady =40,ipadx=40)
 
 window.mainloop()
