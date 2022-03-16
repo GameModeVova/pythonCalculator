@@ -113,7 +113,13 @@ head_menu.add_cascade(label="Help", menu=help_menu)
 window.config(menu=head_menu)
 
 #DISPLAY
-display = tk.Entry(window).grid(row=1,column=0,columnspan=7,ipady=20,ipadx=720)
+current_val = ""
+
+
+d_num = tk.StringVar(window)
+d_num.set(current_val)
+display = tk.Label(window,textvariable=d_num)
+display.grid(row=1,column=0,columnspan=7,ipady=20,ipadx=720)
 
 #NUMPAD
 key_1 = tk.Button(window,text="1").grid(row=3,column=1,ipady =40,ipadx=40)
