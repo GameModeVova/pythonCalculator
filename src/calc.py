@@ -247,42 +247,42 @@ key_decimal = tk.Button(window,text=",",command=click_decimal,bg=default_set[0],
 
 def click_add():
     global current_val
-    current_val = current_val + " + "
+    current_val = current_val + "+"
     d_num.set(current_val)
 
 def click_sub():
     global current_val
-    current_val = current_val + " - "
+    current_val = current_val + "-"
     d_num.set(current_val)
 
 def click_mul():
     global current_val
-    current_val = current_val + " * "
+    current_val = current_val + "*"
     d_num.set(current_val)
 
 def click_div():
     global current_val
-    current_val = current_val + " / "
+    current_val = current_val + "/"
     d_num.set(current_val)
 
 def click_pow():
     global current_val
-    current_val = current_val + " ^ "
+    current_val = current_val + "^"
     d_num.set(current_val)
 
 def click_roo():
     global current_val
-    current_val = current_val + " √ "
+    current_val = current_val + "√"
     d_num.set(current_val)
 
 def click_mod():
     global current_val
-    current_val = current_val + " % "
+    current_val = current_val + "%"
     d_num.set(current_val)
 
 def click_fac():
     global current_val
-    current_val = current_val + " ! "
+    current_val = current_val + "!"
     d_num.set(current_val)
 #-------------------------------------------------------------------------------------------------------------------------
 key_add = tk.Button(window,text="+",command =click_add,bg=default_set[0],fg=default_set[1])\
@@ -311,12 +311,16 @@ key_1_cache = tk.Button(window,text="CACHE",bg=default_set[0],fg=default_set[1])
     .grid(row=8,column=3,ipady =20,ipadx=40)
 
 #INPUT TRANSFORMATION
-op_list = current_val.split()
+solution = current_val
 
 def equals():
-    global op_list
-    op_list = current_val.split()
-    print(op_list)
+    global solution
+    global current_val
+    solution = solver(current_val)
+    current_val = solution
+    d_num.set(solution)
+    current_val = ""
+
 
 key_equals = tk.Button(window,text="=",command=equals,bg=default_set[0],fg=default_set[1])\
     .grid(row=6,column=3,ipady =40,ipadx=40)
