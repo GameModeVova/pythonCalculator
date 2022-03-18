@@ -317,7 +317,6 @@ def equals():
     global solution
     global current_val
     solution = solver(current_val)
-    current_val = solution
     d_num.set(solution)
     current_val = ""
 
