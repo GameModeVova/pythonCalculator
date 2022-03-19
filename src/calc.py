@@ -91,7 +91,7 @@ def solver(user_input):
 
 #RETURNS TRUE IF LAST CHARACTER OF THE INPUT IS AN OPERATOR
 def last_op(user_input):
-    operators = "+-*/!^%√"
+    operators = "+-*/^%√"
     if user_input[-1] in operators:
         return True
     else:
@@ -268,6 +268,8 @@ def click_add():
     if current_val == "":
         current_val = "0+"
         d_num.set(current_val)
+    elif last_op(current_val):
+        tk.messagebox.showerror("Invalid input", "Addition must follow a number")
     else:
         current_val = current_val + "+"
         d_num.set(current_val)
@@ -281,6 +283,9 @@ def click_mul():
     global current_val
     if current_val == "":
         current_val = "0*"
+        d_num.set(current_val)
+    elif last_op(current_val):
+        tk.messagebox.showerror("Invalid input", "Multiplication must follow a number")
     else:
         current_val = current_val + "*"
         d_num.set(current_val)
@@ -289,6 +294,9 @@ def click_div():
     global current_val
     if current_val == "":
         current_val = "0/"
+        d_num.set(current_val)
+    elif last_op(current_val):
+        tk.messagebox.showerror("Invalid input", "Division must follow a number")
     else:
         current_val = current_val + "/"
         d_num.set(current_val)
@@ -297,27 +305,45 @@ def click_pow():
     global current_val
     if current_val == "":
         current_val = "0^"
+        d_num.set(current_val)
+    elif last_op(current_val):
+        tk.messagebox.showerror("Invalid input", "This operator must follow a number")
     else:
         current_val = current_val + "^"
         d_num.set(current_val)
 
 def click_roo():
     global current_val
-    current_val = current_val + "√"
-    d_num.set(current_val)
+    if current_val == "":
+        current_val = "2√"
+        d_num.set(current_val)
+    elif last_op(current_val):
+        tk.messagebox.showerror("Invalid input", "This operator must follow a number")
+    else:
+        current_val = current_val + "√"
+        d_num.set(current_val)
 
 def click_mod():
     global current_val
     if current_val == "":
         current_val = "0%"
+        d_num.set(current_val)
+    elif last_op(current_val):
+        tk.messagebox.showerror("Invalid input", "Modulo must follow a number")
     else:
         current_val = current_val + "%"
         d_num.set(current_val)
 
 def click_fac():
     global current_val
-    current_val = current_val + "!"
-    d_num.set(current_val)
+    if current_val == "":
+        current_val = "0!"
+        d_num.set(current_val)
+    elif last_op(current_val) or current_val[-1] == "!":
+        tk.messagebox.showerror("Invalid input", "Factorial must follow a number")
+    else:
+        current_val = current_val + "!"
+        d_num.set(current_val)
 #-------------------------------------------------------------------------------------------------------------------------
 key_add = tk.Button(window,text="+",command =click_add,bg=default_set[0],fg=default_set[1])\
     .grid(row=3,column=5,ipady =40,ipadx=40)
