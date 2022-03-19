@@ -91,7 +91,7 @@ def solver(user_input):
 
 #RETURNS TRUE IF LAST CHARACTER OF THE INPUT IS AN OPERATOR
 def last_op(user_input):
-    operators = "+-*/^%√"
+    operators = "+.-*/^%√"
     if user_input[-1] in operators:
         return True
     else:
@@ -224,8 +224,14 @@ def click_0():
 
 def click_decimal():
     global current_val
-    current_val = current_val + "."
-    d_num.set(current_val)
+    if current_val == "":
+        current_val = "0."
+        d_num.set(current_val)
+    elif last_op(current_val):
+        tk.messagebox.showerror("Invalid input", "Floating point must follow a number.")
+    else:
+        current_val = current_val + "."
+        d_num.set(current_val)
 
 
 # label
