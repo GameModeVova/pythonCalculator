@@ -1,6 +1,7 @@
 import math
 import math_lib
 import tkinter as tk
+from tkinter import messagebox
 
 #IMPORTANT check for division by zero
 
@@ -108,14 +109,22 @@ window.rowconfigure((3,4,5,6), weight=3)
 head_menu = tk.Menu(window)
 
 help_menu = tk.Menu(head_menu, tearoff=0)
-help_menu.add_command(label="+")
-help_menu.add_command(label="-")
-help_menu.add_command(label="*")
-help_menu.add_command(label="/")
-help_menu.add_command(label="^")
-help_menu.add_command(label="√")
-help_menu.add_command(label="!")
-help_menu.add_command(label="%")
+help_menu.add_command(label="+",command=lambda:tk.messagebox.showinfo("Hint:+",
+                                                                      "Calculates the sum of two numbers"))
+help_menu.add_command(label="-",command=lambda:tk.messagebox.showinfo("Hint:-",
+                                                                      "Subtracts the second number from the first one"))
+help_menu.add_command(label="*",command=lambda:tk.messagebox.showinfo("Hint:*",
+                                                                      "Multiplies the two numbers"))
+help_menu.add_command(label="/",command=lambda:tk.messagebox.showinfo("Hint:/",
+                                                                      "Calculates the quotient of the dividend and divisor"))
+help_menu.add_command(label="^",command=lambda:tk.messagebox.showinfo("Hint:^",
+                                                                      "Calculates the n-th power of the first number"))
+help_menu.add_command(label="√",command=lambda:tk.messagebox.showinfo("Hint:√",
+                                                                      "Calculates the n-th root of the second number"))
+help_menu.add_command(label="!",command=lambda:tk.messagebox.showinfo("Hint:!",
+                                                                      "Calculates the factorial"))
+help_menu.add_command(label="%",command=lambda:tk.messagebox.showinfo("Hint:%",
+                                                                      "Calculates the remainder of a division (modulo)"))
 head_menu.add_cascade(label="Help", menu=help_menu)
 
 theme_menu = tk.Menu(head_menu, tearoff=0)
