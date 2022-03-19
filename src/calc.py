@@ -89,6 +89,15 @@ def function_executioner(user_input):
 def solver(user_input):
     return(function_executioner(input_formating(error_checker(user_input))))
 
+#RETURNS TRUE IF LAST CHARACTER OF THE INPUT IS AN OPERATOR
+def last_op(user_input):
+    operators = "+-*/!^%√"
+    if user_input[-1] in operators:
+        return True
+    else:
+        return False
+
+
 #Basic tkinter UI Layout
 #---------------------------------------------------------------------------
 
@@ -256,8 +265,12 @@ key_decimal = tk.Button(window,text=",",command=click_decimal,bg=default_set[0],
 
 def click_add():
     global current_val
-    current_val = current_val + "+"
-    d_num.set(current_val)
+    if current_val == "":
+        current_val = "0+"
+        d_num.set(current_val)
+    else:
+        current_val = current_val + "+"
+        d_num.set(current_val)
 
 def click_sub():
     global current_val
@@ -266,18 +279,27 @@ def click_sub():
 
 def click_mul():
     global current_val
-    current_val = current_val + "*"
-    d_num.set(current_val)
+    if current_val == "":
+        current_val = "0*"
+    else:
+        current_val = current_val + "*"
+        d_num.set(current_val)
 
 def click_div():
     global current_val
-    current_val = current_val + "/"
-    d_num.set(current_val)
+    if current_val == "":
+        current_val = "0/"
+    else:
+        current_val = current_val + "/"
+        d_num.set(current_val)
 
 def click_pow():
     global current_val
-    current_val = current_val + "^"
-    d_num.set(current_val)
+    if current_val == "":
+        current_val = "0^"
+    else:
+        current_val = current_val + "^"
+        d_num.set(current_val)
 
 def click_roo():
     global current_val
@@ -286,8 +308,11 @@ def click_roo():
 
 def click_mod():
     global current_val
-    current_val = current_val + "%"
-    d_num.set(current_val)
+    if current_val == "":
+        current_val = "0%"
+    else:
+        current_val = current_val + "%"
+        d_num.set(current_val)
 
 def click_fac():
     global current_val
