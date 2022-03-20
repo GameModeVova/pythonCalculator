@@ -282,8 +282,16 @@ def click_add():
 
 def click_sub():
     global current_val
-    current_val = current_val + "-"
-    d_num.set(current_val)
+    if current_val == "":
+        current_val = current_val + "-"
+        d_num.set(current_val)
+    elif current_val[-1] == "-":
+        click_delete()
+        click_add()
+    else:
+        current_val = current_val + "-"
+        d_num.set(current_val)
+
 
 def click_mul():
     global current_val
