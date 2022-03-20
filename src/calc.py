@@ -419,6 +419,8 @@ window.bind("/",lambda x:click_div())
 window.bind("^",lambda x:click_pow())
 window.bind("!",lambda x:click_fac())
 window.bind("%",lambda x:click_mod())
-window.bind("=",lambda x:equals())
+
+window.bind("<BackSpace>",lambda x:click_delete())
+window.bind("c",lambda x:click_clear())
 
 window.mainloop()
