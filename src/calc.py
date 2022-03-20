@@ -398,4 +398,27 @@ def equals():
 key_equals = tk.Button(window,text="=",command=equals,bg=default_set[0],fg=default_set[1])\
     .grid(row=6,column=3,ipady =40,ipadx=40)
 
+
+#KEBINDS
+#------------------------------------------------------------------------------------------------------------------------
+window.bind("0",lambda x:click_0())
+window.bind("1",lambda x:click_1())
+window.bind("2",lambda x:click_2())
+window.bind("3",lambda x:click_3())
+window.bind("4",lambda x:click_4())
+window.bind("5",lambda x:click_5())
+window.bind("6",lambda x:click_6())
+window.bind("7",lambda x:click_7())
+window.bind("8",lambda x:click_8())
+window.bind("9",lambda x:click_9())
+
+window.bind("+",lambda x:click_add())
+window.bind("-",lambda x:click_sub())
+window.bind("*",lambda x:click_mul())
+window.bind("/",lambda x:click_div())
+window.bind("^",lambda x:click_pow())
+window.bind("!",lambda x:click_fac())
+window.bind("%",lambda x:click_mod())
+window.bind("=",lambda x:equals())
+
 window.mainloop()
