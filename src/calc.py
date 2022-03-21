@@ -55,23 +55,23 @@ def input_formating(user_input):
 def function_executioner(user_input):
     #ADDITION
     if user_input[-1] == "+":
-        return(math_lib.addition(user_input[0], user_input[1]))
+        return(math_lib.add(user_input[0], user_input[1]))
 
     #SUBTRACTION
     if user_input[-1] == "-":
-        return(math_lib.subtraction(user_input[0], user_input[1]))
+        return(math_lib.sub(user_input[0], user_input[1]))
     
     #MULTIPLICATION
     if user_input[-1] == "*":
-        return(math_lib.multiplication(user_input[0], user_input[1]))
+        return(math_lib.mul(user_input[0], user_input[1]))
     
     #DIVISION
     if user_input[-1] == "/":
-        return(math_lib.division(user_input[0], user_input[1]))
+        return(math_lib.div(user_input[0], user_input[1]))
 
     #EXPONENT
     if user_input[-1] == "^":
-        return(math_lib.exponent(user_input[0], user_input[1]))
+        return(math_lib.exp(user_input[0], user_input[1]))
 
     #ROOT
     if user_input[-1] == "√":
@@ -79,11 +79,11 @@ def function_executioner(user_input):
     
     #FACTORIAL
     if user_input[-1] == "!":
-        return(math_lib.factorial(user_input[0]))
+        return(math_lib.fact(user_input[0]))
 
     #REMAINDER
     if user_input[-1] == "%":
-        return(math_lib.remainder(user_input[0], user_input[1]))
+        return(math_lib.mod(user_input[0], user_input[1]))
 
 #ADDING ALL FUNCTIONS FOR A RESULT, ALSO SAVES RESULT INTO CASHE
 def solver(user_input):
