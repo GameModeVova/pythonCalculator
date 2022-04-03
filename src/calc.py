@@ -136,9 +136,6 @@ help_menu.add_command(label="%",command=lambda:tk.messagebox.showinfo("Hint:%",
                                                                       "Calculates the remainder of a division (modulo)"))
 head_menu.add_cascade(label="Help", menu=help_menu)
 
-theme_menu = tk.Menu(head_menu, tearoff=0)
-head_menu.add_cascade(label="Theme", menu=theme_menu)
-
 window.config(menu=head_menu)
 
 #colour schemes
