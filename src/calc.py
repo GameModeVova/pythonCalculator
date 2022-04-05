@@ -75,7 +75,7 @@ def function_executioner(user_input):
 
     #ROOT
     if user_input[-1] == "√":
-        return(math_lib.root(user_input[0], user_input[1]))
+        return(math_lib.root(float(user_input[0]), float(user_input[1])))
     
     #FACTORIAL
     if user_input[-1] == "!":
@@ -148,6 +148,7 @@ window.configure(background=default_set[2])
 # functions
 # ---------------------------------------------------------------------------------------------------------------------------
 current_val = ""
+l_res = ""
 char_limit = 30
 
 def click_clear():
@@ -434,22 +435,31 @@ key_delete = tk.Button(window,text="DELETE",command =click_delete,bg=default_set
     .grid(row=8,column=1,ipady =20,ipadx=40)
 key_clear = tk.Button(window,text="CLEAR",command =click_clear,bg=default_set[0],fg=default_set[1])\
     .grid(row=8,column=2,ipady =20,ipadx=40)
-key_1_cache = tk.Button(window,text="CACHE",bg=default_set[0],fg=default_set[1])\
-    .grid(row=8,column=3,ipady =20,ipadx=40)
 
 #INPUT TRANSFORMATION
 solution = current_val
 
 def equals():
     global solution
+    global l_res
     global current_val
     solution = solver(current_val)
+    l_res = solution
     d_num.set(solution)
     current_val = ""
+
+def show_cache():
+    global l_res
+    global current_val
+    current_val=l_res
+    d_num.set(current_val)
 
 
 key_equals = tk.Button(window,text="=",command=equals,bg=default_set[0],fg=default_set[1])\
     .grid(row=6,column=3,ipady =40,ipadx=40)
+
+key_1_cache = tk.Button(window,text="CACHE",command=show_cache, bg=default_set[0],fg=default_set[1])\
+    .grid(row=8,column=3,ipady =20,ipadx=40)
 
 
 #KEBINDS
@@ -475,5 +485,6 @@ window.bind("%",lambda x:click_mod())
 
 window.bind("<BackSpace>",lambda x:click_delete())
 window.bind("c",lambda x:click_clear())
+window.bind("l",lambda x:show_cache())
 
 window.mainloop()
