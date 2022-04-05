@@ -216,8 +216,13 @@ def click_9():
 
 def click_0():
     global current_val
-    current_val = current_val + "0"
-    d_num.set(current_val)
+    if current_val[-1] == "/":
+        tk.messagebox.showerror("Invalid operation", "Cannot divide by 0.")
+    elif len(current_val) >= 2 and current_val[-2] == "/" and current_val[-1] == "-":
+        tk.messagebox.showerror("Invalid operation", "Cannot divide by 0.")
+    else:
+        current_val = current_val + "0"
+        d_num.set(current_val)
 
 def click_decimal():
     global current_val
