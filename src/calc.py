@@ -148,6 +148,7 @@ window.configure(background=default_set[2])
 # functions
 # ---------------------------------------------------------------------------------------------------------------------------
 current_val = ""
+char_limit = 30
 
 def click_clear():
     global current_val
@@ -162,60 +163,83 @@ def click_delete():
 # key entry
 def click_1():
     global current_val
+    if len(current_val)>= char_limit:
+        tk.messagebox.showerror("Error", "Input lenght reached.")
+
     current_val = current_val + "1"
     d_num.set(current_val)
 
-
 def click_2():
     global current_val
+    if len(current_val)>= char_limit:
+        tk.messagebox.showerror("Error", "Input lenght reached.")
+
     current_val = current_val + "2"
     d_num.set(current_val)
 
-
 def click_3():
     global current_val
+    if len(current_val)>= char_limit:
+        tk.messagebox.showerror("Error", "Input lenght reached.")
+
     current_val = current_val + "3"
     d_num.set(current_val)
 
-
 def click_4():
     global current_val
+    if len(current_val)>= char_limit:
+        tk.messagebox.showerror("Error", "Input lenght reached.")
+
     current_val = current_val + "4"
     d_num.set(current_val)
 
-
 def click_5():
     global current_val
+    if len(current_val)>= char_limit:
+        tk.messagebox.showerror("Error", "Input lenght reached.")
+
     current_val = current_val + "5"
     d_num.set(current_val)
 
-
 def click_6():
     global current_val
+    if len(current_val)>= char_limit:
+        tk.messagebox.showerror("Error", "Input lenght reached.")
+
     current_val = current_val + "6"
     d_num.set(current_val)
 
-
 def click_7():
     global current_val
+    if len(current_val)>= char_limit:
+        tk.messagebox.showerror("Error", "Input lenght reached.")
+
     current_val = current_val + "7"
     d_num.set(current_val)
 
 
 def click_8():
     global current_val
+    if len(current_val)>= char_limit:
+        tk.messagebox.showerror("Error", "Input lenght reached.")
+
     current_val = current_val + "8"
     d_num.set(current_val)
 
-
 def click_9():
     global current_val
+    if len(current_val)>= char_limit:
+        tk.messagebox.showerror("Error", "Input lenght reached.")
+
     current_val = current_val + "9"
     d_num.set(current_val)
 
 
 def click_0():
     global current_val
+    if len(current_val)>= char_limit:
+        tk.messagebox.showerror("Error", "Input lenght reached.")
+
     if current_val[-1] == "/":
         tk.messagebox.showerror("Invalid operation", "Cannot divide by 0.")
     elif len(current_val) >= 2 and current_val[-2] == "/" and current_val[-1] == "-":
@@ -226,6 +250,9 @@ def click_0():
 
 def click_decimal():
     global current_val
+    if len(current_val)>= char_limit:
+        tk.messagebox.showerror("Error", "Input lenght reached.")
+
     if current_val == "":
         current_val = "0."
         d_num.set(current_val)
@@ -273,6 +300,9 @@ key_decimal = tk.Button(window,text=",",command=click_decimal,bg=default_set[0],
 
 def click_add():
     global current_val
+    if len(current_val)>= char_limit:
+        tk.messagebox.showerror("Error", "Input lenght reached.")
+
     if current_val == "":
         current_val = "0+"
         d_num.set(current_val)
@@ -284,6 +314,9 @@ def click_add():
 
 def click_sub():
     global current_val
+    if len(current_val)>= char_limit:
+        tk.messagebox.showerror("Error", "Input lenght reached.")
+
     if current_val == "":
         current_val = current_val + "-"
         d_num.set(current_val)
@@ -297,6 +330,9 @@ def click_sub():
 
 def click_mul():
     global current_val
+    if len(current_val)>= char_limit:
+        tk.messagebox.showerror("Error", "Input lenght reached.")
+
     if current_val == "":
         current_val = "0*"
         d_num.set(current_val)
@@ -308,6 +344,9 @@ def click_mul():
 
 def click_div():
     global current_val
+    if len(current_val)>= char_limit:
+        tk.messagebox.showerror("Error", "Input lenght reached.")
+
     if current_val == "":
         current_val = "0/"
         d_num.set(current_val)
@@ -319,6 +358,9 @@ def click_div():
 
 def click_pow():
     global current_val
+    if len(current_val)>= char_limit:
+        tk.messagebox.showerror("Error", "Input lenght reached.")
+
     if current_val == "":
         current_val = "0^"
         d_num.set(current_val)
@@ -330,6 +372,9 @@ def click_pow():
 
 def click_roo():
     global current_val
+    if len(current_val)>= char_limit:
+        tk.messagebox.showerror("Error", "Input lenght reached.")
+
     if current_val == "":
         current_val = "2√"
         d_num.set(current_val)
@@ -341,6 +386,9 @@ def click_roo():
 
 def click_mod():
     global current_val
+    if len(current_val)>= char_limit:
+        tk.messagebox.showerror("Error", "Input lenght reached.")
+
     if current_val == "":
         current_val = "0%"
         d_num.set(current_val)
@@ -352,6 +400,9 @@ def click_mod():
 
 def click_fac():
     global current_val
+    if len(current_val)>= char_limit:
+        tk.messagebox.showerror("Error", "Input lenght reached.")
+
     if current_val == "":
         current_val = "0!"
         d_num.set(current_val)
