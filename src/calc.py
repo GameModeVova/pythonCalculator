@@ -54,35 +54,35 @@ def input_formating(user_input):
 def function_executioner(user_input):
     #ADDITION
     if user_input[-1] == "+":
-        return(math_library.addition(user_input[0], user_input[1]))
+        return(math_lib.addition(user_input[0], user_input[1]))
 
     #SUBTRACTION
     if user_input[-1] == "-":
-        return(math_library.subtraction(user_input[0], user_input[1]))
+        return(math_lib.subtraction(user_input[0], user_input[1]))
     
     #MULTIPLICATION
     if user_input[-1] == "*":
-        return(math_library.multiplication(user_input[0], user_input[1]))
+        return(math_lib.multiplication(user_input[0], user_input[1]))
     
     #DIVISION
     if user_input[-1] == "/":
-        return(math_library.division(user_input[0], user_input[1]))
+        return(math_lib.division(user_input[0], user_input[1]))
 
     #EXPONENT
     if user_input[-1] == "^":
-        return(math_library.exponent(user_input[0], user_input[1]))
+        return(math_lib.exponent(user_input[0], user_input[1]))
 
     #ROOT
     if user_input[-1] == "√":
-        return(math_library.root(user_input[0], user_input[1]))
+        return(math_lib.root(user_input[0], user_input[1]))
     
     #FACTORIAL
     if user_input[-1] == "!":
-        return(math_library.factorial(user_input[0]))
+        return(math_lib.factorial(user_input[0]))
 
     #REMAINDER
     if user_input[-1] == "%":
-        return(math_library.remainder(user_input[0], user_input[1]))
+        return(math_lib.remainder(user_input[0], user_input[1]))
 
 #ADDING ALL FUNCTIONS FOR A RESULT, ALSO SAVES RESULT INTO CASHE
 def solver(user_input):
