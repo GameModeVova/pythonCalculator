@@ -156,7 +156,7 @@ window.configure(background=default_set[2])
 current_val = ""
 l_res = ""
 char_limit = 30
-operators = ["+","*","/","%","^","!","√"]
+operators = ["+","*","/","%","^","!","√","-"]
 
 def click_clear():
     global current_val
@@ -469,7 +469,14 @@ def equals():
     global solution
     global l_res
     global current_val
-    global  operation_c
+    global operation_c
+    global operators
+
+    if len(str(current_val)) >= 0:
+        if str(current_val)[-1] in operators:
+            tk.messagebox.showerror("Input error", "Invalid input format")
+            return
+
     solution = str(solver(current_val))
     l_res = solution
     d_num.set(solution)
