@@ -134,6 +134,12 @@ help_menu.add_command(label="!",command=lambda:tk.messagebox.showinfo("Hint:!",
                                                                       "Calculates the factorial"))
 help_menu.add_command(label="%",command=lambda:tk.messagebox.showinfo("Hint:%",
                                                                       "Calculates the remainder of a division (modulo)"))
+help_menu.add_command(label="Delete",command=lambda:tk.messagebox.showinfo("Hint: Delete",
+                                                                      "Deletes the last character"))
+help_menu.add_command(label="Cache",command=lambda:tk.messagebox.showinfo("Hint: Cache",
+                                                                      "Returns the last solved number"))
+help_menu.add_command(label="Clear",command=lambda:tk.messagebox.showinfo("Hint: Clear",
+                                                                      "Clears all input"))
 head_menu.add_cascade(label="Help", menu=help_menu)
 
 window.config(menu=head_menu)
@@ -150,14 +156,21 @@ window.configure(background=default_set[2])
 current_val = ""
 l_res = ""
 char_limit = 30
+operators = ["+","*","/","%","^","!","√"]
 
 def click_clear():
     global current_val
+    global operation_c
     current_val = ""
+    operation_c = False
     d_num.set(current_val)
 
 def click_delete():
     global current_val
+    global operation_c
+
+    if current_val[-1] in operators:
+        operation_c = False
     current_val = current_val[0:-1]
     d_num.set(current_val)
 
@@ -301,6 +314,10 @@ def double_input():
     global operation_c
     global current_val
 
+    for char in current_val:
+        if char in operators:
+            operation_c = True
+
     if operation_c == True:
         equals()
         current_val=l_res
@@ -312,7 +329,7 @@ def click_add():
     global current_val
     if len(str(current_val))>= char_limit:
         tk.messagebox.showerror("Error", "Input lenght reached.")
-    elif current_val == "":
+    elif str(current_val) == "":
         current_val = "0+"
         d_num.set(current_val)
     elif last_op(current_val):
@@ -326,7 +343,7 @@ def click_sub():
     global current_val
     if len(str(current_val))>= char_limit:
         tk.messagebox.showerror("Error", "Input lenght reached.")
-    elif current_val == "":
+    elif str(current_val) == "":
         current_val = current_val + "-"
         d_num.set(current_val)
     elif current_val[-1] == "-":
@@ -342,7 +359,7 @@ def click_mul():
     global current_val
     if len(str(current_val))>= char_limit:
         tk.messagebox.showerror("Error", "Input lenght reached.")
-    elif current_val == "":
+    elif str(current_val) == "":
         current_val = "0*"
         d_num.set(current_val)
     elif last_op(current_val):
@@ -356,7 +373,7 @@ def click_div():
     global current_val
     if len(str(current_val))>= char_limit:
         tk.messagebox.showerror("Error", "Input lenght reached.")
-    elif current_val == "":
+    elif str(current_val) == "":
         current_val = "0/"
         d_num.set(current_val)
     elif last_op(current_val):
@@ -370,7 +387,7 @@ def click_pow():
     global current_val
     if len(str(current_val))>= char_limit:
         tk.messagebox.showerror("Error", "Input lenght reached.")
-    elif current_val == "":
+    elif str(current_val) == "":
         current_val = "0^"
         d_num.set(current_val)
     elif last_op(current_val):
@@ -384,7 +401,7 @@ def click_roo():
     global current_val
     if len(str(current_val))>= char_limit:
         tk.messagebox.showerror("Error", "Input lenght reached.")
-    elif current_val == "":
+    elif str(current_val)  == "":
         current_val = "2√"
         d_num.set(current_val)
     elif last_op(current_val):
@@ -398,7 +415,7 @@ def click_mod():
     global current_val
     if len(str(current_val))>= char_limit:
         tk.messagebox.showerror("Error", "Input lenght reached.")
-    elif current_val == "":
+    elif str(current_val)  == "":
         current_val = "0%"
         d_num.set(current_val)
     elif last_op(current_val):
@@ -412,7 +429,7 @@ def click_fac():
     global current_val
     if len(str(current_val))>= char_limit:
         tk.messagebox.showerror("Error", "Input lenght reached.")
-    elif current_val == "":
+    elif str(current_val) == "":
         current_val = "0!"
         d_num.set(current_val)
     elif last_op(current_val) or current_val[-1] == "!":
@@ -452,9 +469,11 @@ def equals():
     global solution
     global l_res
     global current_val
+    global  operation_c
     solution = str(solver(current_val))
     l_res = solution
     d_num.set(solution)
+    operation_c = False
     current_val = ""
 
 def show_cache():
