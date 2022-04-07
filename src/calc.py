@@ -478,6 +478,9 @@ def equals():
             return
 
     solution = str(solver(current_val))
+    if solution[-1] == "0" and solution[-2] == ".":
+        solution=solution[0:-2]
+
     l_res = solution
     d_num.set(solution)
     operation_c = False
