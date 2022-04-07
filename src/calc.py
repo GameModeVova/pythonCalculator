@@ -484,7 +484,7 @@ def equals():
     l_res = solution
     d_num.set(solution)
     operation_c = False
-    current_val = ""
+    current_val = solution
 
 def show_cache():
     global l_res
