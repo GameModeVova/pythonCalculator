@@ -1,17 +1,20 @@
 import math
+<<<<<<< Updated upstream
 import numpy as np
+=======
+>>>>>>> Stashed changes
 
 def add(first_value, second_value):
-    return(round(float(first_value)+float(second_value),10))
+    return(round(float(first_value)+float(second_value),10)) #won't be better
 
 def sub(first_value, second_value):
-    return(round(float(first_value)-float(second_value),10))
+    return(round(float(first_value)-float(second_value),10)) #won't be better
 
 def mul(first_value, second_value):
-    return(round(float(first_value)*float(second_value),10))
+    return(round(float(first_value)*float(second_value),10)) #won't be better
 
-def div(first_value, second_value):
-    zero_div_error = "YOU HAVE COMMITED A SIN BY ATTEMPTING TO DIVIDE BY ZERO" #Change this error message to something actually meaningful
+def div(first_value, second_value): #probably perfect
+    zero_div_error = "error: division by zero" 
     
     #CHECKING FOR DIVISION BY ZERO
     if second_value == 0:
@@ -22,7 +25,7 @@ def div(first_value, second_value):
 def exp(first_value, second_value): 
     return(round(math.pow(float(first_value), float(second_value)),10))
 
-def root(first_value, second_value):
+def root(first_value, second_value): #I am not sure if this is working fine
     try:
         return(round(first_value**(1/second_value),10))
     except:
@@ -51,16 +54,16 @@ def root(first_value, second_value):
         return(zero_root_error)
 """   
 
-def fact(first_value):
-    non_integer_error = "YOU HAVE SINNED BY ATTEMPTING TO CALCULATE FACTORIAL OF A NON-INTEGER" #This error message should also be changed
+def fact(first_value): #probably fine
+    non_integer_error = "error: factorial of a non-integer" 
 
     if float(first_value).is_integer():
         return(round(math.factorial(int(first_value)),10))
     else:
         return(non_integer_error)
 
-def mod(first_value, second_value):
-    div_error = "YOU HAVE COMMITED A SIN BY ATTEMPTING TO DIVIDE BY ZERO" #Change this error message to something actually meaningful
+def mod(first_value, second_value): #probably fine
+    div_error = "error: division zero" 
     
     #CHECKING FOR DIVISION BY ZERO
     if second_value == 0:
