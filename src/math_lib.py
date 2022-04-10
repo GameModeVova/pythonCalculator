@@ -1,13 +1,6 @@
-## @file math_lib.py
-#
-#  @brief Library for basic mathematical functions. 
-
-#  @author Vladimir Azarov (xazaro00)
-#  @author insert your name here
-#  @author insert your name here
-#  @author insert your name here
-#
-# @section description_main Description
+##
+# @file math_lib.py
+# @brief Library for basic mathematical functions. 
 # Library for mathematical functions that includes multiplication, 
 # addition, substraction, division, modulo, exponentiation, n-th root
 # and factorial.

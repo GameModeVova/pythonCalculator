@@ -1,3 +1,21 @@
+##
+# @mainpage Python calculator VUT FIT IVS project 
+#
+# @section description_main Description
+# Calculator application developed in Python 
+# @authors Vladimir Azarov (xazaro00)
+# @authors insert your name here
+# @authors insert your name here
+# @authors insert your name here
+
+##
+# @file calc.py
+# @brief Insert brief des of the file. 
+# insert 
+# long 
+# description
+
+# Imports
 import math
 import math_lib
 import tkinter as tk
