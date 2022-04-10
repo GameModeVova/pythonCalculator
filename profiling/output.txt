@@ -1,0 +1,50 @@
+
+**********************************************************************
+# Profiling output with 10 input values
+________________________________________________________________
+$ python -m cProfile stddev.py < test.txt | grep "ncalls.*" ;
+ python -m cProfile stddev.py < test.txt | grep "math_lib.py.*"
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function) 
+        1    0.000    0.000    0.000    0.000 math_lib.py:1(<module>)
+       11    0.000    0.000    0.000    0.000 math_lib.py:10(mul)
+        2    0.000    0.000    0.000    0.000 math_lib.py:13(div)
+       11    0.000    0.000    0.000    0.000 math_lib.py:22(exp)
+        1    0.000    0.000    0.000    0.000 math_lib.py:25(root)
+       20    0.000    0.000    0.000    0.000 math_lib.py:4(add)
+       11    0.000    0.000    0.000    0.000 math_lib.py:7(sub)
+**********************************************************************
+
+
+**********************************************************************
+# Profiling output with 100 input values
+________________________________________________________________
+$ python -m cProfile stddev.py < test.txt | grep "ncalls.*" ;
+ python -m cProfile stddev.py < test.txt | grep "math_lib.py.*"
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function) 
+        1    0.000    0.000    0.000    0.000 math_lib.py:1(<module>)
+      101    0.000    0.000    0.000    0.000 math_lib.py:10(mul)
+        2    0.000    0.000    0.000    0.000 math_lib.py:13(div)
+      101    0.000    0.000    0.000    0.000 math_lib.py:22(exp)
+        1    0.000    0.000    0.000    0.000 math_lib.py:25(root)
+      200    0.000    0.000    0.000    0.000 math_lib.py:4(add)
+      101    0.000    0.000    0.000    0.000 math_lib.py:7(sub)
+**********************************************************************
+
+
+**********************************************************************
+# Profiling output with 1000 input values
+_________________________________________________________________
+$ python -m cProfile stddev.py < test.txt | grep "ncalls.*" ;
+ python -m cProfile stddev.py < test.txt | grep "math_lib.py.*"
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 math_lib.py:1(<module>)
+     1001    0.000    0.000    0.001    0.000 math_lib.py:10(mul)
+        2    0.000    0.000    0.000    0.000 math_lib.py:13(div)
+     1001    0.000    0.000    0.001    0.000 math_lib.py:22(exp)
+        1    0.000    0.000    0.000    0.000 math_lib.py:25(root)
+     2000    0.001    0.000    0.002    0.000 math_lib.py:4(add)
+     1001    0.000    0.000    0.001    0.000 math_lib.py:7(sub)
+**********************************************************************
