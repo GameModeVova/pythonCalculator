@@ -1,0 +1,5 @@
+By profiler outputs we can see that the most time program spends 
+executing math_lib.add() function (called 2000 times). 
+
+We assume that code can be sped up by finding or creating some algorithm, 
+that can invoke this function only 1 time per 1 input number. 
