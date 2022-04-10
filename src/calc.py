@@ -473,7 +473,7 @@ def equals():
     global operators
 
     if len(str(current_val)) >= 0:
-        if str(current_val)[-1] in operators:
+        if str(current_val)[-1] in operators and str(current_val)[-1] != "!":
             tk.messagebox.showerror("Input error", "Invalid input format")
             return
 
