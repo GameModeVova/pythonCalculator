@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['menu_0',['menu',['../namespacecalc.html#a905479d79c2aa8410d2fc374bc75cc5b',1,'calc']]]
+  ['window_0',['window',['../namespacecalc.html#a04a8a2bbfa9c15500892b8e5033d625b',1,'calc']]]
 ];
