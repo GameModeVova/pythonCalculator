@@ -78,10 +78,6 @@ def function_executioner(user_input):
     if user_input[-1] == "%":
         return(math_lib.mod(user_input[0], user_input[1]))
 
-#ADDING ALL FUNCTIONS FOR A RESULT, ALSO SAVES RESULT INTO CASHE
-def solver(user_input):
-    return(function_executioner(input_formating(user_input)))
-
 #RETURNS TRUE IF LAST CHARACTER OF THE INPUT IS AN OPERATOR
 def last_op(user_input):
     operators = "+.-*/^%√"
@@ -471,7 +467,7 @@ def equals():
             tk.messagebox.showerror("Input error", "Invalid input format")
             return
 
-    solution = str(solver(current_val))
+    solution = str(function_executioner(input_formating(current_val)))
     if solution[-1] == "0" and solution[-2] == ".":
         solution=solution[0:-2]
 
