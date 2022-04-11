@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['input_5fformating_0',['input_formating',['../namespacecalc.html#a81baccad7ec112da41f0f0b37a41b18b',1,'calc']]]
+  ['last_5fop_0',['last_op',['../namespacecalc.html#a311ede5993570f68a25306bb90524ff1',1,'calc']]]
 ];

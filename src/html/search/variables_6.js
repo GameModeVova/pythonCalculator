@@ -1,26 +1,5 @@
 var searchData=
 [
-  ['key_5f0_0',['key_0',['../namespacecalc.html#ab4a50a1b05eeee36c09df63bc79390e0',1,'calc']]],
-  ['key_5f1_1',['key_1',['../namespacecalc.html#ad54ee2b63b7766aa9007ee9c77094388',1,'calc']]],
-  ['key_5f1_5fcache_2',['key_1_cache',['../namespacecalc.html#a71cb757fa3f0cdfc4148195e79746aea',1,'calc']]],
-  ['key_5f2_3',['key_2',['../namespacecalc.html#a87e2f5ed00b88874b97694c48562b324',1,'calc']]],
-  ['key_5f3_4',['key_3',['../namespacecalc.html#aa4a4022925f680b6096e3d1aad0060eb',1,'calc']]],
-  ['key_5f4_5',['key_4',['../namespacecalc.html#af437bb5886ffe10838a689b6cef50561',1,'calc']]],
-  ['key_5f5_6',['key_5',['../namespacecalc.html#a9944df17b3a438472f8c7e467b3d1a61',1,'calc']]],
-  ['key_5f6_7',['key_6',['../namespacecalc.html#af4fc12be7dc9e9f4127f3c09f77d40e4',1,'calc']]],
-  ['key_5f7_8',['key_7',['../namespacecalc.html#a545be3b10ec8e32e1b875d4ed91cfa7f',1,'calc']]],
-  ['key_5f8_9',['key_8',['../namespacecalc.html#ae32e917ad49c4d50960743af98ca9939',1,'calc']]],
-  ['key_5f9_10',['key_9',['../namespacecalc.html#ad9f4f1349a7d041c939f160f5c93978d',1,'calc']]],
-  ['key_5fadd_11',['key_add',['../namespacecalc.html#a540ea5aec29b4ad0adf79d27cc7c31c8',1,'calc']]],
-  ['key_5fclear_12',['key_clear',['../namespacecalc.html#aebbbd4ddde54ec6b1a0e8006307e1c94',1,'calc']]],
-  ['key_5fdecimal_13',['key_decimal',['../namespacecalc.html#a9753228c30189095720a078d11e84edb',1,'calc']]],
-  ['key_5fdelete_14',['key_delete',['../namespacecalc.html#a41145cb44890c7a8c7db5659bf0f397f',1,'calc']]],
-  ['key_5fdiv_15',['key_div',['../namespacecalc.html#a3e62aea38da3b2d2e43618d693fb5d6e',1,'calc']]],
-  ['key_5fequals_16',['key_equals',['../namespacecalc.html#a5451474c8db911a27ccc4ae1aa741ef2',1,'calc']]],
-  ['key_5ffac_17',['key_fac',['../namespacecalc.html#afde4ef51466f7d23e8e06f5ca2763d32',1,'calc']]],
-  ['key_5fmod_18',['key_mod',['../namespacecalc.html#a0d6f84d783b0b4a9a09e760b55ae1764',1,'calc']]],
-  ['key_5fmul_19',['key_mul',['../namespacecalc.html#affdc0710226adbd92e8cb7df506d27d4',1,'calc']]],
-  ['key_5fpow_20',['key_pow',['../namespacecalc.html#aa5826ac0b236b2b46131ce21c9fa302c',1,'calc']]],
-  ['key_5froo_21',['key_roo',['../namespacecalc.html#a72179edcec3424d961d6eff5fa4ab6cd',1,'calc']]],
-  ['key_5fsub_22',['key_sub',['../namespacecalc.html#abb9f2bc525c14f5c9a37dffa522b56ca',1,'calc']]]
+  ['operation_5fc_0',['operation_c',['../namespacecalc.html#a92ee5411cf25cc85546789f52a8ccd7b',1,'calc']]],
+  ['operators_1',['operators',['../namespacecalc.html#a64882d3e5d2f6a8957801403d61570ef',1,'calc']]]
 ];

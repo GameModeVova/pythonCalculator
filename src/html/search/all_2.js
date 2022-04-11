@@ -26,8 +26,5 @@ var searchData=
   ['click_5fpow_23',['click_pow',['../namespacecalc.html#a5342504ee372e44ae89f0969dd688205',1,'calc']]],
   ['click_5froo_24',['click_roo',['../namespacecalc.html#a46fa792b29c1af95d45dae066790de3b',1,'calc']]],
   ['click_5fsub_25',['click_sub',['../namespacecalc.html#ad3fe000f3355c12fdf4c31efeb6fd94c',1,'calc']]],
-  ['column_26',['column',['../namespacecalc.html#ae78e6e11a40e6dba1bae097358f97d15',1,'calc']]],
-  ['columnspan_27',['columnspan',['../namespacecalc.html#a826cfdbb8bbdf30d559238ee000db1cb',1,'calc']]],
-  ['command_28',['command',['../namespacecalc.html#a9e0992eae3950adccaf4847fbff4231d',1,'calc']]],
-  ['current_5fval_29',['current_val',['../namespacecalc.html#a9e5b1dd3603f07f7242d096003a9d4f3',1,'calc']]]
+  ['current_5fval_26',['current_val',['../namespacecalc.html#a9e5b1dd3603f07f7242d096003a9d4f3',1,'calc']]]
 ];
