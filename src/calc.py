@@ -104,6 +104,7 @@ def last_op(user_input):
 #WINDOW CONFIG
 window = tk.Tk()
 window.title("Calculator")
+window.iconbitmap("calc_icon.ico")
 window.geometry("720x800")
 
 #PLACEMENT GRID CONFIG
