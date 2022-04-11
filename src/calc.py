@@ -20,24 +20,7 @@ import math
 import math_lib
 import tkinter as tk
 from tkinter import messagebox
-
-#ERRORCHECKER --- missing check for few errors (vis. inside function)
-def error_checker(user_input):
-    error = "HERE YOU WILL HAVE A TEXT CONVEYING TO THE USER THAT HE HAS DONE BIG BAD"
-    
-    allowed_numerics = "0123456789."
-    allowed_operators = "+-*/!^%√" #specific case for !, where user inputs only one number
-
-    #
-    # MISSING AN ERROR FOR INCORRECT POSITIONING OF INPUT ex.: "^23-*2*", ban such format as an input in GUI
-    #
-
-    for i in user_input:
-        if (i in allowed_numerics) or (i in allowed_operators):
-            return(user_input)
-        else:
-            return(error)
-    
+   
 #FORMATING USER INPUT INTO A FORM SUITABLE FOR THE PROGRAM --- SHOULD BE ALL SET
 def input_formating(user_input):
     allowed_operators = "+-*/!^%√"
@@ -97,7 +80,7 @@ def function_executioner(user_input):
 
 #ADDING ALL FUNCTIONS FOR A RESULT, ALSO SAVES RESULT INTO CASHE
 def solver(user_input):
-    return(function_executioner(input_formating(error_checker(user_input))))
+    return(function_executioner(input_formating(user_input)))
 
 #RETURNS TRUE IF LAST CHARACTER OF THE INPUT IS AN OPERATOR
 def last_op(user_input):
