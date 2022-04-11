@@ -21,14 +21,6 @@ import math_lib
 import tkinter as tk
 from tkinter import messagebox
 
-#IMPORTANT check for division by zero
-
-#HELPER --- missing help message, might be better to do alongside GUI
-def help_initiator(user_input):
-    helper =  "HERE YOU WILL HAVE A TEXT TRYING TO HELP A USER WHO GOT LOST"
-    if user_input == "?":
-        return(help)
-    
 #ERRORCHECKER --- missing check for few errors (vis. inside function)
 def error_checker(user_input):
     error = "HERE YOU WILL HAVE A TEXT CONVEYING TO THE USER THAT HE HAS DONE BIG BAD"
