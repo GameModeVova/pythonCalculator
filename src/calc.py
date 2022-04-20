@@ -254,7 +254,7 @@ def click_0():
     global current_val
     if len(str(current_val))>= char_limit:
         tk.messagebox.showerror("Error", "Input lenght reached.")
-    elif current_val[-1] == "/":
+    elif len(str(current_val))>=1 and [-1] == "/":
         tk.messagebox.showerror("Invalid operation", "Cannot divide by 0.")
     elif len(str(current_val)) >= 2 and current_val[-2] == "/" and current_val[-1] == "-":
         tk.messagebox.showerror("Invalid operation", "Cannot divide by 0.")
