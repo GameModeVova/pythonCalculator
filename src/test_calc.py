@@ -1,6 +1,11 @@
+##
+# @file test_calc.py
+# @brief Tests for mathematical library. 
+
 import unittest
 import math_lib 
 
+"""! TestCase class """
 class TestCase(unittest.TestCase):
     def test_add(self):
         self.assertEqual(math_lib.add(2, 3), 5)
