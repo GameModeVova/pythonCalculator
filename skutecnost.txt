@@ -1,1 +1,11 @@
-tento soubor bude obsahovat rozdil mezi planem projektu a skutecnosti
+                                Deadline:               Reality:
+
+Testy	                        March 11, 2022          March 11, 2022   
+Knihovna	                    March 13, 2022          March 13, 2022 --- there was a mistake that had to be resolved the following week
+GUI		                        March 20, 2022          March 20, 2022 --- small things missing, but most was done
+Instalator + uz dokumentace		March 27, 2022          April 25, 2022 --- grosly underestimated the challenge of the installator
+MakeFile	                  	April 3, 2022           April 23, 2022 --- had to wait for installator
+Debugging 	                	April 3, 2022           
+Profiling 	                	April 3, 2022
+Dokumentace	                	April 10, 2022
+Mockup	    	                April 10, 2022
