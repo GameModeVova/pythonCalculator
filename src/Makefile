@@ -10,7 +10,6 @@
 all: stddev.py test_calc.py math_lib.py calc.py
 
 pack: 
-	mkdir -p ../../xbalaz18_xazaro00_xvasik05_xospal01
 	mkdir -p ../../xbalaz18_xazaro00_xvasik05_xospal01/doc
 	mkdir -p ../../xbalaz18_xazaro00_xvasik05_xospal01/install
 	mkdir -p ../../xbalaz18_xazaro00_xvasik05_xospal01/repo
@@ -19,7 +18,7 @@ pack:
 #TODO: copy installators to install 
 	# some code that copies installators
 	cp -rT ../../pythonCalculator ../../xbalaz18_xazaro00_xvasik05_xospal01/repo
-	mv ../../xbalaz18_xazaro00_xvasik05_xospal01 ../.
+	mv ../../xbalaz18_xazaro00_xvasik05_xospal01 ../
 	zip -r ../xbalaz18_xazaro00_xvasik05_xospal01.zip ../xbalaz18_xazaro00_xvasik05_xospal01
 	rm -r ../xbalaz18_xazaro00_xvasik05_xospal01
 run: calc.py
@@ -29,6 +28,7 @@ clean:
 	rm -r -f ../xbalaz18_xazaro00_xvasik05_xospal01.zip
 	rm -r -f html
 	rm -r -f latex
+	rm -r -f __pycache__
 
 test: test_calc.py
 	python test_calc.py
