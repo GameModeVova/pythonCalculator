@@ -1,4 +1,4 @@
-xlogin01 100 (základ GUI a základní mat. operace)
-xlogin02 100 (pokročilé mat. operace)
-xlogin03 90 (profiling, instalátor)
-xlogin04 110 (testy, dokumentace)
+xazaro00 100 (testy, makefile, profiling)
+xvasik05 100 (debugging, dokumentace)
+xbalaz18 100 (GUI, uzivatelsky manual, mockup)
+xospal01 100 (knihovna mat. funkci, ikonka)
