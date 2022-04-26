@@ -1,1 +1,2 @@
-tento soubor bude obsahovat rozdil mezi planem projektu a skutecnosti
+Jediný vyrazný rozdieľ medzi plánom a skutočnosti je chýbajúcí inštalátor.
+Okrem inštalátora, funkcionalita je na požiadanom úrovni. 
