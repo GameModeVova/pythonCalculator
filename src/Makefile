@@ -13,7 +13,7 @@ pack:
 	mkdir -p ../../xbalaz18_xazaro00_xvasik05_xospal01/doc
 	mkdir -p ../../xbalaz18_xazaro00_xvasik05_xospal01/install
 	mkdir -p ../../xbalaz18_xazaro00_xvasik05_xospal01/repo
-#TODO: add user documentation copy
+	cp ../calculator_user_manual.pdf ../../xbalaz18_xazaro00_xvasik05_xospal01/doc
 	cp ../dokumentace.pdf ../../xbalaz18_xazaro00_xvasik05_xospal01/doc
 	cp calculator-1.0-linux-x64-installer.run ../../xbalaz18_xazaro00_xvasik05_xospal01/install
 	cp -rT ../../pythonCalculator ../../xbalaz18_xazaro00_xvasik05_xospal01/repo
