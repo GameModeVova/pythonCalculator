@@ -113,7 +113,8 @@ def last_op(user_input):
 ## Main window of the graphical inteface.
 window = tk.Tk()
 window.title("Calculator")
-window.iconbitmap("calc_icon.ico")
+Icon = tk.PhotoImage(file = "calc_icon.png")
+window.iconphoto(True,Icon)
 window.geometry("720x800")
 
 #PLACEMENT GRID CONFIG
