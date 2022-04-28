@@ -15,8 +15,7 @@ pack:
 	mkdir -p ../../xbalaz18_xazaro00_xvasik05_xospal01/repo
 #TODO: add user documentation copy
 	cp ../dokumentace.pdf ../../xbalaz18_xazaro00_xvasik05_xospal01/doc
-#TODO: copy installators to install 
-	# some code that copies installators
+	cp calculator-1.0-linux-x64-installer.run ../../xbalaz18_xazaro00_xvasik05_xospal01/install
 	cp -rT ../../pythonCalculator ../../xbalaz18_xazaro00_xvasik05_xospal01/repo
 	mv ../../xbalaz18_xazaro00_xvasik05_xospal01 ../
 	zip -r ../xbalaz18_xazaro00_xvasik05_xospal01.zip ../xbalaz18_xazaro00_xvasik05_xospal01
